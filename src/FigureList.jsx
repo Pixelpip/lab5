@@ -1,10 +1,14 @@
 import { useState } from "react";
 import BasicFigure from "./BasicFigure";
 import "./FigureList.css"; // Import CSS for styling
+const rand1=Math.floor(Math.random()*1000)
+const rand2=Math.floor(Math.random()*1000)
+const rand3=Math.floor(Math.random()*1000)
+
 const initialImages = [
-  { src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e", caption: "Image 1" },
-  { src: "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107", caption: "Image 2" },
-  { src: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0", caption: "Image 3" }
+  { src: `https://picsum.photos/200/400?random=${rand1}`, caption: "Image 1" },
+  { src: `https://picsum.photos/200/400?random=${rand2}`, caption: "Image 2" },
+  { src: `https://picsum.photos/200/400?random=${rand3}`, caption: "Image 3" }
 ];
 const FigureList = () => {
   const [images, setImages] = useState(initialImages);
